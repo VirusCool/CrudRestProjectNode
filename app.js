@@ -15,7 +15,9 @@ con.on('open', () => {
 app.use(express.json())
 
 app.use('/employee',empRouter)
-
+app.use('/', (req,res) =>{
+    res.send("hello")
+})
 
 app.listen(9000, () => {
     console.log("Server Started...")
