@@ -1,5 +1,6 @@
 const express = require('express')
 const mong = require('mongoose')
+const port = process.env.port || 9000
 const empRouter = require('./routers/employee')
 
 const uri ="mongodb+srv://changeit:<password>@cluster0.wcwlw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
@@ -19,6 +20,6 @@ app.use('/', (req,res) =>{
     res.send("hello")
 })
 
-app.listen(9000, () => {
+app.listen(port, () => {
     console.log("Server Started...")
 })
